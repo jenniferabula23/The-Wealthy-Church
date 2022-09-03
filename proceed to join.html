@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>IVWC</title>
+    <!-- MDB icon -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        html,
+        body,
+        header,
+        #intro {
+            height: 90%;
+        }
+
+        .view {
+            height: 60%;
+        }
+
+
+        #intro {
+            background: url("img/IMG_2057.jpg")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .top-nav-collapse {
+            background-color: goldenrod;
+        }
+
+        @media (max-width: 768px) {
+            .navbar:not(.top-nav-collapse) {
+                background-color: goldenrod;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background-color: goldenrod;
+            }
+        }
+
+        .timeline {
+            position: relative;
+            list-style: none;
+            padding: 1rem 0;
+            margin: 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            margin-left: -1px;
+            background-color: #50a1ff;
+        }
+
+        .timeline-element {
+            position: relative;
+            width: 50%;
+            padding: 1rem 0;
+            padding-right: 2.5rem;
+            text-align: right;
+        }
+
+        .timeline-element::before {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 1.35rem;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid #50a1ff;
+            background-color: #fff;
+        }
+
+        .timeline-element:nth-child(even)::before {
+            right: auto;
+            left: -8px;
+        }
+
+        .timeline-element:nth-child(even) {
+            margin-left: 50%;
+            padding-left: 2.5rem;
+            padding-right: 0;
+            text-align: left;
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline::before {
+                left: 8px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline-element {
+                width: 100%;
+                text-align: left;
+                padding-left: 2.5rem;
+                padding-right: 0;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline-element::before {
+                top: 1.25rem;
+                left: 1px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline-element:nth-child(even) {
+                margin-left: 0rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline-element {
+                width: 100%;
+                text-align: left;
+                padding-left: 2.5rem;
+                padding-right: 0;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline-element:nth-child(even)::before {
+                left: 1px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .timeline-element::before {
+                top: 1.25rem;
+            }
+        }
+    </style>
+
+
+    <header>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+
+            <div class="container">
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto smooth-scroll">
+                        <li class="nav-item smooth-scroll list-unstyled">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                    </ul>
+                    <!-- Links -->
+
+                </div>
+                <!-- Collapsible content -->
+
+            </div>
+
+        </nav>
+
+        <!--Mask-->
+        <div id="intro" class="view">
+            <div class="mask rgba-black-strong">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1 class="font-weight-bold text-center" style="color: white;">Join Us Today</h1>
+                <hr class="hr-light my-4 w-75">
+            </div>
+
+        </div>
+        <!--/.Mask-->
+
+        <!--/.Navbar-->
+
+
+</head>
+
+<body>
+
+
+    <br>
+    <div class="container z-depth-1 my-5 py-5 px-4 px-lg-0">
+
+        <!-- Section -->
+        <section>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+
+                    <ol class="timeline">
+                        <li class="timeline-element">
+                            <!-- Button trigger modal -->
+                            <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header text-center">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body mx-3">
+                                            <div class="md-form mb-5">
+                                                <i class="fas fa-user prefix grey-text"></i>
+                                                <input type="text" id="orangeForm-name" class="form-control validate">
+                                                <label data-error="wrong" data-success="right"
+                                                    for="orangeForm-name">Your Full Name</label>
+                                            </div>
+                                            <div class="md-form mb-5">
+                                                <i class="fas fa-envelope prefix grey-text"></i>
+                                                <input type="email" id="orangeForm-email" class="form-control validate">
+                                                <label data-error="wrong" data-success="right"
+                                                    for="orangeForm-email">Your email address</label>
+                                            </div>
+
+                                            <div class="md-form mb-4">
+                                                <i class="fas fa-lock prefix grey-text"></i>
+                                                <input type="password" id="orangeForm-pass"
+                                                    class="form-control validate">
+                                                <label data-error="wrong" data-success="right"
+                                                    for="orangeForm-pass">Your Location</label>
+                                            </div>
+                                            <div class="md-form mb-4">
+                                                <i class="fas fa-lock prefix grey-text"></i>
+                                                <input type="password" id="orangeForm-pass"
+                                                    class="form-control validate">
+                                                <label data-error="wrong" data-success="right"
+                                                    for="orangeForm-pass">Your Expectations</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer d-flex justify-content-center">
+                                            <button class="btn btn-deep-orange">Submit Form</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <a href=""  class="btn btn- btn-rounded  font-weight-bold dark-grey-text mb-3" data-toggle="modal"
+                                    data-target="#modalRegisterForm">Fill and Submit Application Form</a>
+                            </div>
+
+                            <p class="text-muted">We are so honoured to have you here.Kindly fill this application form to help us keep your data and reach out to you.</p>
+                        </li>
+
+                        <li class="timeline-element">
+                            <h5 class="font-weight-bold dark-grey-text mb-3">Attend and Complete a Membership
+                                    class</a>
+                            </h5>
+                            <p class="text-muted">You can join us in person or reach out to our teachers...Click to book an appointment</p>
+                        </li>
+
+                        <li class="timeline-element">
+                            <h5 class="font-weight-bold dark-grey-text mb-3">Undergo an Interview</h5>
+                            <p class="text-muted">This is going to be in the third week of training with us.Our team will definitely reach out to you .For more enquiries call +233(556530107)</p>
+                        </li>
+
+                        <li class="timeline-element">
+                            <p class="text-muted font-weight-bold "> 🥳🥳 HURRAY YOU ARE OFFICIALLY A MEMBER OF THE
+                                WEALTHY CHURCH</p>
+                        </li>
+                    </ol>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- Section -->
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer class="page-footer font-small grey darken-3">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2022 Copyright:
+            <a href="#">idealvoice</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+
+
+
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript">
+
+    </script>
+
+</body>
+
+</html>

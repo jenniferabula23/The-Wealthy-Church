@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>IVWC</title>
+  <!-- MDB icon -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cookie&family=Festive&family=Noto+Serif+Display:ital,wght@1,100;1,800&family=Playfair+Display:ital,wght@1,600&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cookie&family=Festive&family=Happy+Monkey&family=Noto+Serif+Display:ital,wght@1,100;1,800&family=Oleo+Script+Swash+Caps&family=Pacifico&family=Playfair+Display:ital,wght@1,600&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cookie&family=Festive&family=Noto+Serif+Display:ital,wght@1,100;1,800&family=Pacifico&family=Playfair+Display:ital,wght@1,600&display=swap"
+    rel="stylesheet">
+
+
+
+  <style>
+    html,
+    body,
+    header,
+    .view {
+      height: 98%;
+
+    }
+
+    @media (max-width: 740px) {
+
+      html,
+      body,
+      header,
+      .view {
+        height: 80vh;
+      }
+    }
+
+    .top-nav-collapse {
+      background-color: rgb(139, 101, 5) !important;
+    }
+
+    .navbar:not(.top-nav-collapse) {
+      background: transparent !important;
+    }
+
+    @media (max-width: 991px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #403401 !important;
+      }
+    }
+
+    .rgba-gradient {
+      background: linear-gradient(45deg, rgba(41, 2, 59, 0.6), rgba(6, 6, 7, 0.69) 100%);
+    }
+
+    .navbar .nav-link {
+      color: #fff !important;
+    }
+
+    .contenedor {
+      height: 100%;
+      padding: 5% 0;
+    }
+
+    h1 {
+      color: #FCFBFA;
+    }
+
+    .container_foto {
+      background-color: rgba(3, 3, 0, 5);
+      padding: 0;
+      overflow: hidden;
+      max-width: 350px;
+      margin: 5px;
+    }
+
+    .container_foto article {
+      padding: 10%;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+
+    .container_foto h2 {
+      color: #fff;
+      font-weight: 800;
+      font-size: 25px;
+      border-bottom: #fff solid 1px;
+    }
+
+    .container_foto h4 {
+      font-weight: 300;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .container_foto img {
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.4;
+      -webkit-transition: all 4s ease;
+      -moz-transition: all 4s ease;
+      -o-transition: all 4s ease;
+      -ms-transition: all 4s ease;
+      transition: all 4s ease;
+    }
+
+    .ver_mas {
+      background-color: #FEB66C;
+      position: absolute;
+      width: 100%;
+      height: 70px;
+      bottom: 0;
+      z-index: 1;
+      opacity: 0;
+      transform: translate(0px, 70px);
+      -webkit-transform: translate(0px, 70px);
+      -moz-transform: translate(0px, 70px);
+      -o-transform: translate(0px, 70px);
+      -ms-transform: translate(0px, 70px);
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .ver_mas span {
+      font-size: 40px;
+      color: #fff;
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      top: 13px;
+    }
+
+
+    /*hovers*/
+
+    .container_foto:hover {
+      cursor: pointer;
+    }
+
+    .container_foto:hover img {
+
+      transform: scale(2.5);
+    }
+
+    .container_foto:hover article {
+      transform: translate(2px, -69px);
+      -webkit-transform: translate(2px, -69px);
+      -moz-transform: translate(2px, -69px);
+      -o-transform: translate(2px, -69px);
+      -ms-transform: translate(2px, -69px);
+    }
+
+    .container_foto:hover .ver_mas {
+      transform: translate(0px, 0px);
+      -webkit-transform: translate(0px, 0px);
+      -moz-transform: translate(0px, 0px);
+      -o-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+
+    }
+  </style>
+
+
+
+  <header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+
+      <div class="container">
+
+        <a class="navbar-brand" href="#"><span style="font-family: 'Playfair Display', serif;font-size: 30px;"> <span
+              style="color:goldenrod ;">I</span> <span style="color: goldenrod;">V</span> <span
+              style="color:  goldenrod;">W</span> <span style="color:  goldenrod;">C</span></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav mr-auto smooth-scroll">
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" data-offset="90">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nwehere.html" data-offset="90">I'm New Here</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html" data-offset="90">Events</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="appointment.html" data-offset="90">Appointments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="giving.html" data-offset="90">Giving</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="seminary.html" data-offset="90">Seminary</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" data-offset="90">Contact Us</a>
+            </li>
+          </ul>
+
+          <!-- Social Icon  -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/IVWC2010/">
+                <i class="fab fa-facebook-f light-green-text-2"></i>
+              </a>
+            </li>
+
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Full Page Intro -->
+    <div id="intro-section" class="view">
+
+      <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline autoplay
+        muted loop>
+        <source src="img/pexels-luis-quintero-5949378.mp4" type="video/mp4">
+      </video>
+
+      <!-- Full Page Intro -->
+      <div>
+
+      </div>
+
+      <!-- Mask & flexbox options-->
+      <div class="mask flex-center rgba-black-strong d-flex justify-content-center align-items-center">
+        <!--Grid column-->
+        <div class="col-md-8 mb-4 white-text text-center wow fadeIn">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h4 class="subtext-header mt-2 mb-4"><span style="font-family: 'Playfair Display', serif;font-size: 35px;">
+              <p class="font-weight-bold" style="font-size: 16px">Grace,Peace and Love be unto you;Believing in the Lord
+                Jesus is the greatest and best decision you can ever make</p>
+              <p class="font-weight-bold" style="font-size: 16px">Your Life without Christ is Lifeless</p>
+              <br>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!-- Mask & flexbox options-->
+
+  </header>
+
+<body>
+
+
+
+  <!--Main Navigation-->
+
+
+  <div class="container-fluid my-5 py-5 ">
+    <h3 class=" dark-grey-text" style=" text-align: center;font-family: 'Oleo Script Swash Caps', cursive;">
+      <marquee behavior="" direction="">🤝🏽🤝🏽You are warmly welcome...Bienvenue 👏👏</marquee>
+    </h3>
+    <hr class="hr-light my-4 w-75">
+    <!--Section: Content-->
+
+
+
+    <section class="px-md-5 mx-md-5 text-center dark-grey-text">
+
+      <br>
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+
+        <div class="col-md-6 mb-4 mb-md-0">
+          <hr class="hr-light my-4 w-75">
+          <p>
+            We are delighted to warmly welcome you to the <b>Wealthy church</b>. You have come to the right place at the
+            right time. Here, we are very passionate about your eternal destiny and committed to your spiritual welfare.
+            This is a website that has a lot to offer you with unlimited access to life-transforming, systematic and
+            expository teaching of the word of God and resources specifically tailored to meet your own spiritual needs;
+            deepen your walk with God and add value to your entire life.
+          </p>
+
+
+          <p class="animated shake infinite">
+            <a class="btn btn-red btn-md ml-0" href="https://www.facebook.com/IVWC2010/" role="button">Live Service<i
+                class="fa fa-gem ml-2"></i></a>
+
+            <a class="btn btn-red btn-md ml-0" href="sermons.html" role="button">Sermons<i
+                class="fa fa-gem ml-2"></i></a>
+          </p>
+
+
+
+
+
+        </div>
+        <!--Grid column-->
+        <div class="col-md-5 mb-4 mb-md-0">
+          <img src="img/IMG_2250 (1).jpg" class="img-fluid" alt="">
+          <h6 style="font-family: 'Oleo Script Swash Caps', cursive;"><a href="bio.html">Apostle Dr. Romeo Blankson</a>
+          </h6>
+
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+
+
+      </div>
+      <!--Grid row-->
+
+
+    </section>
+    <!--Section: Content-->
+
+
+
+
+
+
+  </div>
+
+  <div class="container-fluid mt-3 mb-5">
+
+    <!-- Section -->
+    <section
+      style="background-image: url('img/IMG_1956.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <div class="mask rgba-black-strong py-5">
+        <div class="container text-center my-5">
+          <p class="font-weight-bold  white-text" style=" text-align: center;">Anniversary</p>
+          <h1 class="lead text-center white-text pt-2 mb-5">
+            <b class="font-weight-bold animated tada infinite" style="font-size: 25px;">GRATEFUL FOR GRACE....ITS ALL ABOUT JESUS</b>
+          </h1>
+          <hr>
+        </div>
+      </div>
+
+    </section>
+    <!-- Section -->
+    <br>
+    <br>
+    <h2 class="font-weight-bold" style=" text-align: center;">Our Services</h2>
+
+    <div class="container-fluid contenedor text-center animated bounce infinite ">
+      <div class=" container text-center">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto z-depth-5">
+            <div class="ver_mas text-center">
+              <span class="lnr lnr-eye"></span>
+            </div>
+            <article class="text-center">
+              <h2>English Service</h2>
+              <h4>In Him was life, and the life was the light of men.</h4>
+              <h4><b>7:30am-9:30am</b></4>
+            </article>
+            <img src="img/IMG_2285.jpg" alt="">
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto z-depth-5">
+            <div class="ver_mas text-center">
+              <span id="click" class="lnr lnr-eye"></span>
+            </div>
+            <article class="text-left">
+              <h2 style="text-align: center;">Twi Som</h2>
+              <h4 style="text-align: center;"> Ne mu na nkwa wɔ; na saa nkwa no na ɛma nnipa hann </h4>
+              <h4 style="text-align: center;"><b>9:30am-12:30am</b></4>
+            </article>
+            <img src="img/IMG_2174.jpg" alt="">
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto z-depth-5">
+            <div class="ver_mas text-center">
+              <span id="click" class="lnr lnr-eye"></span>
+            </div>
+            <article class="text-left">
+              <h2 style="text-align: center;">Children Service🥳</h2>
+              <h4 style="text-align: center;">Train up a child in the way he should go: and when he is old, he will not
+                depart from it. </h4>
+              <h4 style="text-align: center;"><b>9:30am-12:30am</b></4>
+            </article>
+            <img src="img/IMG_2205.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5 py-5 z-depth-1">
+
+
+      <!--Section: Content-->
+      <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+
+
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center mb-4">
+
+          <!--Grid column-->
+          <div class="col-md-8 text-center">
+
+            <p>We know life doesn’t come with instructions. We know you want to get it right. We want to help.
+              Here’s how to get started:
+
+              Join us this Sunday in person or online.
+              Connect with us to get helpful resources for your life.
+              Connect with others by joining a group.
+              Don’t settle for just good enough. We’d love to help you find the purpose and life-giving relationships
+              you were made for.</p>
+
+            <!--Facebook-->
+            <a href="#" class="mx-1" role="button"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="mx-1" role="button"><i class="fab fa-youtube"></i></a>
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+
+      </section>
+      <!--Section: Content-->
+
+
+    </div>
+
+  </div>
+
+
+  <div class="container my-5 text-center">
+    <!-- Section -->
+    <section>
+
+      <hr class="w-header my-4">
+      <p class="lead text-center text-muted pt-2 mb-5 animated bounce infinite">Join thousands Believers To Lift The
+        Name Of Our King</p>
+
+      <div class="row">
+        <div class="col-md-6 col-xl-4 mb-4">
+          <div class="card text-center bg-danger">
+            <div class="card-body">
+              <p class="mt-4 pt-2"><i class="fa fa-user fa-4x white-text"></i></p>
+              <h5 class="font-weight-normal  my-4 py-2"><a class="text-white" href="#">New Here</a></h5>
+              <p class="text-white mb-4">
+                Welcome to all as we celebrate the glory of our Lord and Savior, Jesus Christ. It is my pleasure to
+                welcome all the brothers and sisters of the church.
+
+                We want to thank everyone for taking time out of their days to give praise to the Lord for continuing to
+                bless their lives day in and day out. Your sacrifices have allowed you to be fruitful and abundant.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 mb-4 z-depth-5">
+          <div class="card text-center">
+            <div class="card-body">
+              <p class="mt-4 pt-2"><i class="fa fa-plug fa-4x grey-text"></i></p>
+              <h5 class="font-weight-normal my-4 py-2"><a class="dark-grey-text" href="#">Connect with us</a></h5>
+              <p class="text-muted mb-4">
+                As we gather in-person or watch online, we want to make sure you have access to all the information you may need to connect and learn at the Wealthy Church. Join us at Live for access to weekly messages, sermon and Life Group notes, and ways to connect with our church and others.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4 mb-4 ">
+          <div class="card text-center bg-warning lighten-1 text-white">
+            <div class="card-body">
+              <p class="mt-4 pt-2"><i class="fa fa-arrow-up fa-4x"></i></p>
+              <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Click here for recent sermons</a>
+              </h5>
+              <p class="mb-4">
+                We are an evangelical consecutive christians;we believe in the Supremacy and the Soverignty of Christ as long as his divinity is concern.We teach the Word of God not just the Bible.Our doctrines are Christocentric,exposing who Christ really is as long as the entire revelation of God's word states in the bible.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- Section -->
+
+
+  </div>
+
+  <div class="container my-5 py-5 ">
+
+
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center dark-grey-text">
+
+      <h3 class="font-weight-bold mb-5">Attend in-person at a campus or join us online for church!</h3>
+
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4 mb-md-0">
+
+          <i class="fa fa-users fa-3x red-text"></i>
+
+          <p class="font-weight-bold my-3">IN-PERSON</p>
+
+          <p class="text-muted mx-md-5">Join us in-person at one of our locations on Sundays.</p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4 mb-md-0">
+
+          <i class=" fab fa-facebook-f fa-3x red-text"></i>
+
+          <p class="font-weight-bold my-3"> <a href="https://www.facebook.com/IVWC2010/"> FACEBOOK LIVE & YOUTUBE
+              LIVE</a></p>
+
+          <p class="text-muted mx-md-5">Engage with our Facebook and YouTube communities, Sundays 7AM.</p>
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+  <!--Main Navigation-->
+
+
+
+  <footer class="page-footer font-small grey darken-3">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+      <a href="#">The wealthy church</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript">
+    $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
+      var next = $(this).next();
+      if (!next.length) {
+        next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+
+      for (var i = 0; i < 4; i++) {
+        next = next.next();
+        if (!next.length) {
+          next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+      }
+    });
+  </script>
+
+</body>
+
+</html>

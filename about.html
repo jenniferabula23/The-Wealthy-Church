@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>idealvoice</title>
+  <!-- MDB icon -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    html,
+    body,
+    header,
+    #intro {
+      height: 90%;
+    }
+
+    .view {
+      height: 100%;
+    }
+
+
+    #intro {
+      background: url("img/IMG_2029.jpg")no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .top-nav-collapse {
+      background-color: goldenrod;
+    }
+
+    @media (max-width: 768px) {
+      .navbar:not(.top-nav-collapse) {
+        background-color: goldenrod;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background-color: goldenrod;
+      }
+    }
+ 
+    */
+:root {
+  --level-1: #8dccad;
+  --level-2: #f5cc7f;
+  --level-3: #7b9fe0;
+  --level-4: #f27c8d;
+  --black: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ol {
+  list-style: none;
+}
+
+
+
+.container {
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.rectangle {
+  position: relative;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* LEVEL-1 STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.level-1 {
+  width: 80%;
+  margin: 0 auto 30px;
+  background: var(--level-1);
+  
+}
+
+.level-1::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+  background-color: goldenrod;
+}
+
+.level-8 {
+  width: 70%;
+  margin: 0 auto 30px;
+  background: var(--level-1);
+
+}
+
+.level-8::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+  background-color: goldenrod;
+}
+
+
+/* LEVEL-2 STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.level-2-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.level-2-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: var(--black);
+  background-color: goldenrod;
+}
+
+.level-2-wrapper::after {
+  display: none;
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  width: calc(100% + 20px);
+  height: 2px;
+  background: var(--black);
+}
+
+.level-2-wrapper li {
+  position: relative;
+}
+
+.level-2-wrapper > li::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 30px;
+  background: var(--black);
+  background-color: goldenrod;
+}
+
+.level-2 {
+  width: 70%;
+  margin: 0 auto 40px;
+  background: var(--level-2);
+}
+
+.level-2::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+}
+
+.level-2::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-100%, -50%);
+  width: 20px;
+  height: 2px;
+  background: var(--black);
+  background-color: whitesmoke;
+}
+
+
+/* LEVEL-3 STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.level-3-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.level-3-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: calc(25% - 5px);
+  width: calc(50% + 10px);
+  height: 2px;
+  background: var(--black);
+}
+
+.level-3-wrapper > li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+}
+
+.level-3 {
+  margin-bottom: 20px;
+  background: var(--level-3);
+}
+
+
+/* LEVEL-4 STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.level-4-wrapper {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+}
+
+.level-4-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 2px;
+  height: calc(100% + 20px);
+  background: var(--black);
+}
+
+.level-4-wrapper li + li {
+  margin-top: 20px;
+}
+
+.level-4 {
+  font-weight: normal;
+  background: var(--level-4);
+}
+
+.level-4::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-100%, -50%);
+  width: 20px;
+  height: 2px;
+  background: var(--black);
+}
+
+
+/* MQ STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 700px) {
+  .rectangle {
+    padding: 20px 10px;
+  }
+
+  .level-1,
+  .level-2 {
+    width: 100%;
+  }
+
+  .level-1 {
+    margin-bottom: 20px;
+  }
+
+  .level-1::before,
+  .level-2-wrapper > li::before {
+    display: none;
+  }
+  
+  .level-2-wrapper,
+  .level-2-wrapper::after,
+  .level-2::after {
+    display: block;
+  }
+
+  .level-2-wrapper {
+    width: 90%;
+    margin-left: 10%;
+  }
+
+  .level-2-wrapper::before {
+    left: -20px;
+    width: 2px;
+    height: calc(100% + 40px);
+  }
+
+  .level-2-wrapper > li:not(:first-child) {
+    margin-top: 50px;
+  }
+}
+
+
+
+  </style>
+
+
+  <header>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+
+      <div class="container">
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto smooth-scroll">
+            <li class="nav-item smooth-scroll list-unstyled">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+          </ul>
+          <!-- Links -->
+
+        </div>
+        <!-- Collapsible content -->
+
+      </div>
+
+    </nav>
+
+    <!--Mask-->
+    <div id="intro" class="view">
+      <div class="mask rgba-black-strong">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="font-weight-bold text-center" style="color: white;">ABOUT US</h1>
+        <hr class="hr-light my-4 w-75">
+      </div>
+
+    </div>
+    <!--/.Mask-->
+
+    <!--/.Navbar-->
+
+
+</head>
+
+<body>
+
+  <div class="container my-5">
+    <!--Section: Content-->
+    <!-- Section description -->
+    <h4 class="font-weight-bold text-center">Our Story</h4>
+    <p class="lead text-center w-responsive mx-auto text-muted mt-4 pt-2 mb-5">
+      <span style="font-size: 17px;">
+        Ideal voice worship enter ,the <b> Wealthy church</b> was born on the 4th September 2010 under the visionary
+        leadership of <b> Dr.Romeo Eric Paa Kwesi Blankson </b>called into the office of an Apostle.
+        Ideal voice worship center was God's prophetic name given to the comission by God from Revelation 3:20 upon the
+        basis of this scripture, who we are ,who we stand for as well as our mandate is hanged on it;we therefore have a
+        four-fold mandate <br>
+        .We win souls for Christ <br>
+        .We build found souls for Christ <br>
+        .We train ministers for ministry <br>
+        .We send ministers after ordination into ministry <br>
+        <br>
+        Our hallmark is <b>Preparation</b>: <br>
+        Preparing Souls for the new heaven (Revelation 21:11) <br>
+        Preparing Ministers for Ministry (2 Timothy 2:1,2) <br>
+        <br>
+        We are an evangelical consecutive christians;we believe in the Supremacy and the Soverignty of Christ as long as
+        his divinity is concern.We teach the <b>Word of God</b> not <b>just the Bible</b>.Our doctrines are
+        Christocentric,exposing who Christ really is as long as the entire revelation of God's word states in the bible.
+        We frown on any set of teaching which is not Christ centered because Jesus the Christ is the primary person of
+        the bible structure.
+      </span>
+    </p>
+
+    <!--First row-->
+
+  </div>
+
+  <div class="container my-5">
+
+
+
+
+
+  </div>
+
+  <h4 class="font-weight-bold text-center">Our Organogram</h4>
+  <div class="container my-5 py-5 z-depth-1">
+    <div class="container text-center">
+      <h5 class="level-1 rectangle animated bounce infinite ">Jesus Christ</h5>
+      <h6 class="level-8 rectangle ">World Moderating Apostle</h6>
+      <h6 class="level-8 rectangle ">Board Of Trustees</h6>
+      <ol class="level-2-wrapper">
+        <li>
+          <h6 class="level-2 rectangle ">General Secretary</h6>
+        </li>
+        <li>
+          <h6 class="level-2 rectangle ">International Missions Director</h6>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+
+
+  </div>
+  <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fullHeightModalRight">
+      Click here to officially become a member
+    </button></center>
+     <!-- Full Height Modal Right -->
+     <div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+
+     <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
+     <div class="modal-dialog modal-full-height modal-center" role="document">
+
+
+       <div class="modal-content">
+         <div class="modal-header">
+           <h6 class="modal-title w-100" id="myModalLabel"><center><b>Have you heard the Ideal Voice of GOd?</b></center></h6>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <div class="modal-body">
+           <p class="font-weight-bold text-center">BECOME A CHILD OF GOD</p>
+           <p>*Believe in the Lord Jesus that He is the Christ anf God Himself(John 20:30 and 31)
+             <br>
+             *Believe in the Lord Jesus CHrist that He died ,was buried and rose from the dead according to the scriptures.(1 corinthians 15:1-4)
+             <br>
+             *Confess the Lord Jesus Christ shamelessly as your Lord and personal Saviour (Romans 10:9,10,11/John 1:11 and 12)
+           </p>
+           <br>
+
+         </div>
+         <div class="modal-footer justify-content-center">
+           <button type="button" class="btn btn-primary"><a href="proceed to join.html">Proceed to Join</a></button>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- Full Height Modal Right -->
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <footer class="page-footer font-small grey darken-3">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+      <a href="#">idealvoice</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+
+
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript">
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>IVWC</title>
+  <!-- MDB icon -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    html,
+    body,
+    header,
+    #intro {
+      height: 90%;
+    }
+
+    .view {
+      height: 100%;
+    }
+
+
+    #intro {
+      background: url("img/download\ \(1\).jpeg")no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .top-nav-collapse {
+      background-color:  rgb(139, 101, 5);
+    }
+
+    @media (max-width: 768px) {
+      .navbar:not(.top-nav-collapse) {
+        background-color: rgb(139, 101, 5);
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background-color:  rgb(139, 101, 5);
+      }
+    }
+
+ 
+
+  </style>
+
+
+  <header>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+
+      <div class="container">
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto smooth-scroll">
+            <li class="nav-item smooth-scroll list-unstyled">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+          </ul>
+          <!-- Links -->
+
+        </div>
+        <!-- Collapsible content -->
+
+      </div>
+
+    </nav>
+
+
+</head>
+
+<body>
+
+    <div class="container my-5 py-5 z-depth-1">
+
+
+        <!--Section: Content-->
+        <section class="px-md-5 mx-md-5 text-center dark-grey-text">
+    
+          <style>
+            .map-container {
+              height: 200px;
+              position: relative;
+            }
+    
+            .map-container iframe {
+              left: 0;
+              top: 0;
+              height: 100%;
+              width: 100%;
+              position: absolute;
+            }
+          </style>
+     
+          <!--Google map-->
+          <div id="map-container-google-1" class="z-depth-1 map-container mb-5">
+            <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+              style="border:0" allowfullscreen></iframe>
+          </div>
+          <!--Google Maps-->
+    
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center mb-5">
+    
+            <!--Grid column-->
+            <div class="col-md-6 text-center">
+    
+              <h3 class="font-weight-bold">Contact Us</h3>
+    
+              <!-- Material outline input -->
+              <div class="md-form md-outline mt-3">
+                <input type="email" id="form-email" class="form-control">
+                <label for="form-email">E-mail</label>
+              </div>
+    
+              <!-- Material outline input -->
+              <div class="md-form md-outline">
+                <input type="text" id="form-subject" class="form-control">
+                <label for="form-subject">Subject</label>
+              </div>
+    
+              <!--Material textarea-->
+              <div class="md-form md-outline mb-3">
+                <textarea id="form-message" class="md-textarea form-control" rows="5"></textarea>
+                <label for="form-message">How we can help?</label>
+              </div>
+    
+              <button type="submit" class="btn btn-info btn-sm ml-0">Submit<i class="far fa-paper-plane ml-2"></i></button>
+     
+            </div>
+            <!--Grid column-->
+    
+          </div>
+          <!--Grid row-->
+    
+          <!--Grid row-->
+          <div class="row text-center">
+    
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+    
+              <i class="fas fa-map-marker-alt fa-2x blue-text"></i>
+    
+              <p class="font-weight-bold my-3">Address</p>
+    
+              <p class="text-muted">Ashanti Region, Kumasi</p>
+    
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+    
+                <i class="fas fa-phone fa-2x blue-text"></i>
+    
+                <p class="font-weight-bold my-3">Phone number</p>
+      
+                <p class="text-muted">+233 244222808</p>
+    
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+    
+                <i class="fas fa-envelope fa-2x blue-text"></i>
+    
+                <p class="font-weight-bold my-3">E-mail</p>
+      
+                <p class="text-muted">Ivwc@gmail.com</p>
+    
+            </div>
+            <!--Grid column-->
+    
+          </div>
+          <!--Grid row-->
+    
+    
+        </section>
+        <!--Section: Content-->
+    
+    
+      </div>
+    
+
+
+
+
+
+
+
+
+
+  <footer class="page-footer font-small grey darken-3">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+      <a href="#">idealvoice</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+
+
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript">
+
+  </script>
+
+</body>
+
+</html>
